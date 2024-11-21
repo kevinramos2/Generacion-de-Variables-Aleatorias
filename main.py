@@ -2,18 +2,16 @@ import math as math
 import numpy as np
 import random 
 
-#Función weibull
+#Función inversa de weibull
 def inversaWeibull(v,alpha,betha,n):
   resultados = []
   for i in range(n):
     r = random.random()
     x = alpha*((-np.log(1-r))**(1/betha))+v
     resultados.append(x)
-
-
   return resultados
 
-#Función para contar los postes con circunferencia > 3.4
+#Función para contar los postes con circunferencia > 3.4 y los que no cumplen los estándares de calidad (desechos)
 def contarMayores(A):
   mayor = []
   anterior = A
@@ -28,13 +26,13 @@ def contarMayores(A):
       desecho.append(A[i])
   return mayor,desecho
 
+#Main del código
 
 resultados = inversaWeibull(3.25,0.005,1/3,1000)
-
 mayores,desechar = contarMayores(resultados)
 probabilidadAcp = len(mayores)/len(resultados)
 prodesecho = len(desechar)/len(resultados)
 
-print(probabilidadAcp)
-print("La proporción de postes a desechar es de: ",prodesecho )
+print("La probabilidad de encontrar un poste con un una circunferencia mayor a 3.4 es: ",probabilidadAcp)
+print("La proporción de postes a desechar es de: ",prodesecho)
 
