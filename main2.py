@@ -41,5 +41,17 @@ def rutaCompleta():
     tiempos.append(tiempoTotal)
   return tiempos
 
-duracionEsperada = np.mean(rutaCompleta())
-print(duracionEsperada)
+def tiempoExtra(ListaTiempos):
+  extra = []
+  for i in range(len(ListaTiempos)):
+    if (ListaTiempos[i]) > 480:
+      extra.append(ListaTiempos[i]) 
+  return extra
+#Main
+tiempos = rutaCompleta()
+#Punto 1
+duracionEsperada = np.mean(tiempos)
+print("La duración esperada para realizar la ruta completa es de:",round((duracionEsperada/60),2),"horas") 
+#Punto 2
+extra = tiempoExtra(tiempos)
+print("La probabilidad de que haya horas extra en esta ruta es de:",len(extra)/len(tiempos))
