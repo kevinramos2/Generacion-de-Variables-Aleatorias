@@ -13,9 +13,9 @@ def boxMuller(u1,u2, miu, sigmaC):
   return xp
 
 #Función para calcular el tiempo total de la ruta en minutos
-def rutaCompleta():
+def rutaCompleta(N):
   tiempos = []
-  for i in range(1000):
+  for i in range(N):
     u1 = random.random()
     u2 = random.random()
     #Organizar el correo N(90,25)
@@ -48,6 +48,13 @@ def tiempoExtra(ListaTiempos):
     if (ListaTiempos[i]) > 480:
       extra.append(ListaTiempos[i]) 
   return extra
+#Para verificar la probabilidad usando el complemento
+#def prob(ListaTiempos):
+#  menores = []
+#  for i in range(len(ListaTiempos)):
+#    if (ListaTiempos[i]) < 480:
+#      menores.append(ListaTiempos[i]) 
+#  return menores
 
 #Función para calcular la probabilidad de terminar la ruta entre 456 y 504 minutos
 def probabilidad(tiempo):
@@ -57,7 +64,7 @@ def probabilidad(tiempo):
       entre.append(tiempo[i])
   return entre
 #Main
-tiempos = rutaCompleta()
+tiempos = rutaCompleta(10000)
 #Punto 1
 duracionEsperada = np.mean(tiempos)
 print("La duración esperada para realizar la ruta completa es de:",round((duracionEsperada/60),3),"horas") 
@@ -65,7 +72,12 @@ print("La duración esperada para realizar la ruta completa es de:",round((durac
 extra = tiempoExtra(tiempos)
 print("La probabilidad de que haya horas extra en esta ruta es de:",round((len(extra)/len(tiempos)),3))
 #Punto 3
-
+semana = rutaCompleta(6)
+diasTiempoExtra = len(tiempoExtra(semana))
+print("La probabilidad de que una persona que trabaje en la ruta, tenga que hacer horas extra en 2 o más días es:",diasTiempoExtra/6)
+#Para verificar la probabilidad usando el complemento
+#pmuno = 1-(len(prob(semana))/6)
+#print(pmuno)
 #Punto 4
 tiempoEntre = probabilidad(tiempos)
 print("La probabilidad de completar la ruta entre 8h+-24minutos es:",round((len(tiempoEntre)/len(tiempos)),3))
