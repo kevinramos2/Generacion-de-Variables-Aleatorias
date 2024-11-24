@@ -41,6 +41,7 @@ def rutaCompleta():
     tiempos.append(tiempoTotal)
   return tiempos
 
+#Función para determinar los tiempos que son considerados tiempos extra > 8 horas (480 minutos)
 def tiempoExtra(ListaTiempos):
   extra = []
   for i in range(len(ListaTiempos)):
