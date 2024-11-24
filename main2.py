@@ -48,6 +48,14 @@ def tiempoExtra(ListaTiempos):
     if (ListaTiempos[i]) > 480:
       extra.append(ListaTiempos[i]) 
   return extra
+
+#Función para calcular la probabilidad de terminar la ruta entre 456 y 504 minutos
+def probabilidad(tiempo):
+  entre = []
+  for i in range(len(tiempo)):
+    if (tiempo[i])>= 456 and (tiempo[i]) <= 504:
+      entre.append(tiempo[i])
+  return entre
 #Main
 tiempos = rutaCompleta()
 #Punto 1
@@ -55,4 +63,9 @@ duracionEsperada = np.mean(tiempos)
 print("La duración esperada para realizar la ruta completa es de:",round((duracionEsperada/60),2),"horas") 
 #Punto 2
 extra = tiempoExtra(tiempos)
-print("La probabilidad de que haya horas extra en esta ruta es de:",len(extra)/len(tiempos))
+print("La probabilidad de que haya horas extra en esta ruta es de:",round((len(extra)/len(tiempos)),3))
+#Punto 3
+
+#Punto 4
+tiempoEntre = probabilidad(tiempos)
+print("La probabilidad de completar la ruta entre 8h+-24minutos es:",round((len(tiempoEntre)/len(tiempos)),3))
