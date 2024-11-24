@@ -60,7 +60,7 @@ def probabilidad(tiempo):
 tiempos = rutaCompleta()
 #Punto 1
 duracionEsperada = np.mean(tiempos)
-print("La duración esperada para realizar la ruta completa es de:",round((duracionEsperada/60),2),"horas") 
+print("La duración esperada para realizar la ruta completa es de:",round((duracionEsperada/60),3),"horas") 
 #Punto 2
 extra = tiempoExtra(tiempos)
 print("La probabilidad de que haya horas extra en esta ruta es de:",round((len(extra)/len(tiempos)),3))
