@@ -13,6 +13,11 @@ def boxMuller(u1,u2, miu, sigma):
 
 #Función para calcular el tiempo total de la ruta en minutos
 def rutaCompleta(N,):
+
+  #Organizar el correo N(90,25)
+
+  #Punto inicial N(10,4)
+
   #Plaza de luces N(38,16)
 
   #Carabobo N(99,29)
@@ -23,6 +28,9 @@ def rutaCompleta(N,):
 
   #Japón N(85,25)
 
+  #Regreso N(15,4)
+
+  #Labores administrativas N(30,9)
 
   return
 u1 = random.random()
