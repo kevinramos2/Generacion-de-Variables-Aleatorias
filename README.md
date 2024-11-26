@@ -5,3 +5,5 @@
 - Función acumulada
 
 me falta cuadrar la opción de probabilidad del punto 2 y hacer el punto 3
+
+no hay dónde subir los códigos aún:( 
