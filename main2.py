@@ -48,13 +48,6 @@ def tiempoExtra(ListaTiempos):
     if (ListaTiempos[i]) > 480:
       extra.append(ListaTiempos[i]) 
   return extra
-#Para verificar la probabilidad usando el complemento
-#def prob(ListaTiempos):
-#  menores = []
-#  for i in range(len(ListaTiempos)):
-#    if (ListaTiempos[i]) < 480:
-#      menores.append(ListaTiempos[i]) 
-#  return menores
 
 #Función para calcular la probabilidad de terminar la ruta entre 456 y 504 minutos
 def probabilidad(tiempo):
@@ -72,12 +65,16 @@ print("La duración esperada para realizar la ruta completa es de:",round((durac
 extra = tiempoExtra(tiempos)
 print("La probabilidad de que haya horas extra en esta ruta es de:",round((len(extra)/len(tiempos)),3))
 #Punto 3
-semana = rutaCompleta(6)
-diasTiempoExtra = len(tiempoExtra(semana))
-print("La probabilidad de que una persona que trabaje en la ruta, tenga que hacer horas extra en 2 o más días es:",diasTiempoExtra/6)
-#Para verificar la probabilidad usando el complemento
-#pmuno = 1-(len(prob(semana))/6)
-#print(pmuno)
+diasSemana = 6 #Días en la semana
+tiemposExtra = len(extra)/len(tiempos)
+#Calculos para P(X >= 2) con binomial usando el complemento
+ceroDia = (1-tiemposExtra)**diasSemana #Probabilidad de P(X=0)
+unDia = diasSemana*tiemposExtra*((1-tiemposExtra)**(diasSemana-1)) #Probabilidad de P(X = 1))
+total = 1 - (ceroDia+unDia) #Complemento 1-P(X<=1)
+
+
+print("La probabilidad de que una persona que trabaje en la ruta, tenga que hacer horas extra en 2 o más días es:",round(total,3))
+
 #Punto 4
 tiempoEntre = probabilidad(tiempos)
 print("La probabilidad de completar la ruta entre 8h+-24minutos es:",round((len(tiempoEntre)/len(tiempos)),3))
