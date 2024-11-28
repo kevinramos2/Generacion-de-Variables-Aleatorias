@@ -16,8 +16,7 @@ def boxMuller(u1,u2, miu, sigmaC):
 def rutaCompleta(N):
   tiempos = []
   for i in range(N):
-    u1 = random.random()
-    u2 = random.random()
+    u1,u2 = random.random(), random.random()
     #Organizar el correo N(90,25)
     organizar = boxMuller(u1,u2,90,25)
     #Punto inicial N(10,4)
@@ -63,7 +62,7 @@ duracionEsperada = np.mean(tiempos)
 print("La duración esperada para realizar la ruta completa es de:",round((duracionEsperada/60),3),"horas") 
 #Punto 2
 extra = tiempoExtra(tiempos)
-print("La probabilidad de que haya horas extra en esta ruta es de:",round((len(extra)/len(tiempos)),3))
+print("La probabilidad de que haya horas extra en esta ruta es de:",round((len(extra)/len(tiempos)),3)*100)
 #Punto 3
 diasSemana = 6 #Días en la semana
 tiemposExtra = len(extra)/len(tiempos)
@@ -73,8 +72,8 @@ unDia = diasSemana*tiemposExtra*((1-tiemposExtra)**(diasSemana-1)) #Probabilidad
 total = 1 - (ceroDia+unDia) #Complemento 1-P(X<=1)
 
 
-print("La probabilidad de que una persona que trabaje en la ruta, tenga que hacer horas extra en 2 o más días es:",round(total,3))
+print("La probabilidad de que una persona que trabaje en la ruta, tenga que hacer horas extra en 2 o más días es:",round(total,3)*100)
 
 #Punto 4
 tiempoEntre = probabilidad(tiempos)
-print("La probabilidad de completar la ruta entre 8h+-24minutos es:",round((len(tiempoEntre)/len(tiempos)),3))
+print("La probabilidad de completar la ruta entre 8h+-24minutos es:",round((len(tiempoEntre)/len(tiempos)),3)*100)
