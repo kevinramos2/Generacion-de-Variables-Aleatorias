@@ -56,10 +56,29 @@ def probabilidad(tiempo):
     if (tiempo[i])>= 456 and (tiempo[i]) <= 504:
       entre.append(tiempo[i])
   return entre
+
 #Main
 tiempos = rutaCompleta(10000)
+
 #Punto 1
 duracionEsperadaHoras = np.mean(tiempos)
 duracionEsperadaMinuto = duracionEsperadaHoras%60
 print(f'La duración esperada para realizar la ruta completa es de {(int(duracionEsperadaHoras/60))} horas y {int(duracionEsperadaMinuto)} minutos') 
+
 #Punto 2
+extra = tiempoExtra(tiempos)
+tiemposExtra = extra/len(tiempos)
+print(f'La probabilidad de que haya horas extra en la ruta es {tiemposExtra*100:.2f}%')
+
+#Punto 3
+diasSemana = 6 #Días en la semana
+#Calculos para P(X >= 2) con binomial usando el complemento
+ceroDia = (1-tiemposExtra)**diasSemana #Probabilidad de P(X=0)
+unDia = diasSemana*tiemposExtra*((1-tiemposExtra)**(diasSemana-1)) #Probabilidad de P(X = 1))
+total = (1 - (ceroDia+unDia))*100 #Complemento 1-P(X<=1)
+
+print(f'La probabilidad de que un trabajador tenga que hacer horas extra en 2 días o más a la semana es {total:.2f}%')
+
+#Punto 4
+intervalo = (len(probabilidad(tiempos))/len(tiempos))*100
+print(f'La probabilidad de completar la ruta entre 8h-24min y 8h+24min es {intervalo:.2f}%')
