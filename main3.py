@@ -5,7 +5,7 @@ import random
 def aceptoRechazo(n):
   aceptados = []
   rechazos = 0
-  while len(aceptados) < n:
+  while len(aceptados) < 1000:
     r1 = random.random()
     r2 = random.random()
     x = -2 + (2-(-2))*r1
@@ -19,7 +19,7 @@ def aceptoRechazo(n):
 def g(x):
   return ((1/32)*(8-x**3))/0.5
 
-acepto,rechazo = aceptoRechazo(1000)
+acepto,rechazo = aceptoRechazo(10000)
 
 print(f'Se aceptaron {len(acepto)} observaciones')
 print(f'Se rechazaron {rechazo} observaciones')
