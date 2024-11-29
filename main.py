@@ -30,9 +30,9 @@ def contarMayores(A):
 
 resultados = inversaWeibull(3.25,0.005,1/3,1000)
 mayores,desechar = contarMayores(resultados)
-probabilidadAcp = len(mayores)/len(resultados)
-prodesecho = len(desechar)/len(resultados)
-
-print("La probabilidad de encontrar un poste con un una circunferencia mayor a 3.4 es: ",probabilidadAcp)
-print("La proporción de postes a desechar es de: ",prodesecho)
+probabilidadAcp = (len(mayores)/len(resultados))*100
+prodesecho = (len(desechar)/len(resultados))*100
+print()
+print(f'La probabilidad de encontrar un poste con un una circunferencia mayor a 3.4 es {probabilidadAcp:.2f}%')
+print(f'La proporción de postes a desechar es de {prodesecho}%\n')
 
