@@ -63,6 +63,7 @@ tiempos = rutaCompleta(10000)
 #Punto 1
 duracionEsperadaHoras = np.mean(tiempos)
 duracionEsperadaMinuto = duracionEsperadaHoras%60
+print()
 print(f'La duraci√≥n esperada para realizar la ruta completa es de {(int(duracionEsperadaHoras/60))} horas y {int(duracionEsperadaMinuto)} minutos') 
 
 #Punto 2
@@ -81,4 +82,4 @@ print(f'La probabilidad de que un trabajador tenga que hacer horas extra en 2 d√
 
 #Punto 4
 intervalo = (len(probabilidad(tiempos))/len(tiempos))*100
-print(f'La probabilidad de completar la ruta entre 8h-24min y 8h+24min es {intervalo:.2f}%')
+print(f'La probabilidad de completar la ruta entre 8h-24min y 8h+24min es {intervalo:.2f}%\n')
