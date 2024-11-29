@@ -21,5 +21,5 @@ def g(x):
 
 acepto,rechazo = aceptoRechazo(1000)
 
-print("Se aceptaron",len(acepto),"de 1000 observaciones")
-print("Se rechazaron", rechazo,"observaciones")
+print(f'Se aceptaron {len(acepto)} observaciones')
+print(f'Se rechazaron {rechazo} observaciones')
