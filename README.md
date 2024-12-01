@@ -113,4 +113,13 @@ Instala las dependencias necesarias ejecutando:
 
 ```bash
 pip install numpy
+```
+---
 
+## Ejemplos de Ejecución
+
+### Ejercicio 1: Distribución Weibull
+- **Parámetros:** υ=3.25, β=⅓, α=0.005, n=10,000.
+- **Resultados:**
+  - **Probabilidad de postes con circunferencia > 3.4 cm:** 22.36%.
+  - **Proporción de postes desechados:** 15.74%.
