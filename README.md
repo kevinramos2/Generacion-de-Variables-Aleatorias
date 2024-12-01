@@ -142,3 +142,19 @@ Generacion-de-Variables-Aleatorias/
 ### Ejercicio 3: Método de Aceptación/Rechazo
 - **Muestra generada:** 1,000 observaciones aceptadas.
 - **Rechazos:** 4,389 observaciones.
+
+---
+
+## Preguntas Frecuentes (FAQ)
+
+### 1. **¿Por qué utilizar simulación para estos ejercicios?**
+La simulación permite resolver problemas complejos que no tienen una solución analítica directa, especialmente cuando se trabaja con distribuciones no estándar o problemas con múltiples variables aleatorias.
+
+### 2. **¿Se puede ajustar el tamaño de las simulaciones?**
+Sí, simplemente cambia el valor del parámetro `n` en las funciones principales para controlar el tamaño de las muestras generadas.
+
+### 3. **¿Qué tan confiables son los resultados?**
+Los resultados son tan confiables como el tamaño de la muestra simulada. Aumentar `n` mejorará la precisión a costa de mayor tiempo de ejecución.
+
+---
+
