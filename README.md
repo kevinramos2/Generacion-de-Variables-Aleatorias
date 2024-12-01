@@ -157,4 +157,18 @@ Sí, simplemente cambia el valor del parámetro `n` en las funciones principales
 Los resultados son tan confiables como el tamaño de la muestra simulada. Aumentar `n` mejorará la precisión a costa de mayor tiempo de ejecución.
 
 ---
+## Próximos Pasos
+
+1. **Visualización de Resultados:** Generar gráficos con bibliotecas como `matplotlib` o `seaborn`.
+2. **Optimización del Código:** Implementar paralelización o mejorar el rendimiento.
+3. **Nuevos Ejercicios:** Agregar problemas estadísticos adicionales.
+
+---
+
+## Agradecimientos
+
+Este proyecto fue inspirado por ejercicios propuestos en la materia Simulación de Sistemas de la Universidad Nacional de Colombia sede Medellín, los cuales buscan ser un recurso práctico para el aprendizaje.
+
+
+
 
