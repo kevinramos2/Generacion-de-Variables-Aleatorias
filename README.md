@@ -1,4 +1,4 @@
-# Simulación y Estadística - Ejercicios Resueltos
+# Simulación y Generación de Variables Aleatorias - Ejercicios Resueltos
 
 Este repositorio contiene soluciones a tres ejercicios propuestos que utilizan técnicas de simulación para resolver problemas estadísticos. Cada ejercicio incluye un análisis detallado y código en Python.
 
