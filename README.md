@@ -16,7 +16,7 @@ Este repositorio contiene soluciones a tres ejercicios propuestos que utilizan t
 8. [Preguntas Frecuentes](#preguntas-frecuentes-faq)
 9. [Próximos Pasos](#próximos-pasos)
 10. [Agradecimientos](#agradecimientos)
-11. [Licencia](#licencia)
+
 
 ---
 
@@ -115,7 +115,18 @@ Instala las dependencias necesarias ejecutando:
 pip install numpy
 ```
 ---
+## Estructura del Repositorio
+```bash
+Generacion-de-Variables-Aleatorias/
+├── main.py             # Código fuente donde se resuelve el ejercicio #1.
+├── main2.py            # Código fuente donde se resuelve el ejercicio #2.
+├── main3.py            # Código fuente donde se resuelve el ejercicio #3.
+├── README.md           # Documentación detallada del proyecto.
+└── .gitignore          # Archivos y carpetas ignorados por Git.
 
+```
+
+---
 ## Ejemplos de Ejecución
 
 ### Ejercicio 1: Distribución Weibull
@@ -123,3 +134,8 @@ pip install numpy
 - **Resultados:**
   - **Probabilidad de postes con circunferencia > 3.4 cm:** 22.36%.
   - **Proporción de postes desechados:** 15.74%.
+### Ejercicio 2: Simulación de Ruta de Correo
+- **Duración esperada:** Aproximadamente 8 horas y 3 minutos.
+- **Probabilidad de horas extra:** 35.12%.
+- **Probabilidad de trabajar horas extra en 2 o más días a la semana:** 59.88%.
+- **Probabilidad de completar la ruta en 8h ± 24min:** 68.27%.
