@@ -87,4 +87,15 @@ Este ejercicio también está implementado en el archivo `main3.py`. Utiliza fun
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu_usuario/simulacion-estadistica.git
+   git clone https://github.com/kevinramos2/Generacion-de-Variables-Aleatorias
+   ```
+2. Navega al directorio del proyecto:
+   ```bash
+   cd Generacion-de-Variables-Aleatorias
+   ```
+3. Ejecuta los archivos `main.py`,`main2.py`,`main3.py`
+   ```bash
+   python main.py
+   python main2.py
+   python mian3.py
+   ```
