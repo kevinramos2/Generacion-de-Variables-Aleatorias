@@ -139,3 +139,6 @@ Generacion-de-Variables-Aleatorias/
 - **Probabilidad de horas extra:** 35.12%.
 - **Probabilidad de trabajar horas extra en 2 o más días a la semana:** 59.88%.
 - **Probabilidad de completar la ruta en 8h ± 24min:** 68.27%.
+### Ejercicio 3: Método de Aceptación/Rechazo
+- **Muestra generada:** 1,000 observaciones aceptadas.
+- **Rechazos:** 4,389 observaciones.
