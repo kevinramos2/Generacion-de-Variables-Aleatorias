@@ -70,9 +70,7 @@ Consulta el archivo `main2.py` para ver la implementación de este ejercicio.
 
 Usando el **método de aceptación/rechazo**, se genera una muestra de 1,000 observaciones de la variable aleatoria `x` cuya función de densidad de probabilidad es:
 
-\[
-f(x) = \frac{1}{32} (8 - x^3) \quad \text{para } -2 \leq x \leq 2.
-\]
+f(x) = (1/32) * (8 - x³) para -2 ≤ x ≤ 2.
 
 ### Problemas Resueltos:
 1. **Generación de 1,000 observaciones aceptadas.**
