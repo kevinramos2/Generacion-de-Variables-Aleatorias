@@ -99,3 +99,18 @@ Este ejercicio también está implementado en el archivo `main3.py`. Utiliza fun
    python main2.py
    python mian3.py
    ```
+---
+
+## Requisitos
+
+Este proyecto utiliza **Python 3.x** y las siguientes bibliotecas:
+
+- `numpy`
+- `math`
+- `random`
+
+Instala las dependencias necesarias ejecutando:
+
+```bash
+pip install numpy
+
